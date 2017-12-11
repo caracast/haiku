@@ -1,0 +1,3 @@
+start_timer = input('\nType "GO" to start the timer. \n')
+while start_timer == 'GO'.lower:
+  countdown()
