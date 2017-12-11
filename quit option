@@ -1,0 +1,18 @@
+# adding ask_or_quit to inputs checks to see if the user typed 'quit' for their input, and then exits the game if they did.
+# example: guess = ask_or_quit('Take a guess! ')...
+
+# place at beginning of program; I saw this is already part of game.py
+import sys
+
+def ask_or_quit(message):
+  ans = input(message)
+  if ans.upper() == 'QUIT':
+    # SystemExit raises an exception (exception fixed below). 
+    sys.exit('Thanks for playing!')
+  
+  return ans
+
+# place at end of program
+# fixes exit message
+except SystemExit: 
+  print('Thanks for playing!')
